@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Página Web</title>
+    <style>
+        /* Estilos generales y variables */
+        :root {
+            --color-primario: #E89C00;
+            --color-secundario: #00477A;
+            --color-texto-claro: #f4f4f4;
+            --color-texto-oscuro: #333;
+            --fuente-principal: 'Arial', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--fuente-principal);
+            line-height: 1.6;
+            background-color: #fff;
+            color: var(--color-texto-oscuro);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Cabecera */
+        header {
+            background: var(--color-primario);
+            color: var(--color-texto-claro);
+            padding: 1rem 2rem;
+            text-align: center;
+            border-bottom: 5px solid var(--color-secundario);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        /* Contenido principal */
+        main {
+            flex-grow: 1;
+            padding: 2rem;
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-section {
+            background-color: #f0f0f0;
+            padding: 3rem 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .cta-section h2 {
+            color: var(--color-secundario);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .cta-section p {
+            margin-bottom: 2rem;
+        }
+
+        /* Botón */
+        .btn {
+            background-color: var(--color-secundario);
+            color: var(--color-texto-claro);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #003355; /* Un tono más oscuro */
+        }
+
+        /* Pie de página */
+        footer {
+            background: var(--color-secundario);
+            color: var(--color-texto-claro);
+            text-align: center;
+            padding: 1.5rem 1rem;
+            border-top: 5px solid var(--color-primario);
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Media queries para responsividad */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1rem;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Proyecto Web</h1>
+    </header>
+
+    <main>
+        <section class="cta-section">
+            <h2>¡Hola, mundo!</h2>
+            <p>Este es el contenido principal de mi página. Haz clic en el botón para ejecutar tu primer algoritmo.</p>
+            <button class="btn" onclick="mi_primer_algoritmo()">Ejecutar Algoritmo</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Compañía. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="aprendiendo.js"></script>
+
+    <script>
+        function mi_primer_algoritmo() {
+            alert("¡Hola desde mi_primer_algoritmo!");
+            console.log("El algoritmo ha sido ejecutado.");
+        }
+    </script>
+</body>
+</html>
