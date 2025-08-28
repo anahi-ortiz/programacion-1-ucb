@@ -1,0 +1,157 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo con degradado pastel */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Caja principal */
+.contenedor {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  padding: 30px 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: center;
+  width: 350px;
+  transition: transform 0.3s;
+}
+
+.contenedor:hover {
+  transform: translateY(-5px);
+}
+
+/* Título */
+.contenedor h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* Input */
+.contenedor input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  text-align: center;
+  background: #f9f9f9;
+  box-shadow: inset 2px 2px 6px #d9d9d9, inset -2px -2px 6px #ffffff;
+  transition: 0.3s;
+}
+
+.contenedor input:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 8px #fda085;
+}
+
+/* Botón */
+.contenedor button {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.contenedor button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Resultado */
+#resultado {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #444;
+  font-size: 18px;
+  min-height: 25px;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f0f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.contenedor {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contenedor button {
+  background: #4e73df;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contenedor button:hover {
+  background: #2e59d9;
+  transform: scale(1.05);
+}
+
+#resultado {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+#resultado li {
+  margin: 8px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+
+#resultado li.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#resultado button {
+  background: #1cc88a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+#resultado button:hover {
+  background: #17a673;
+  transform: scale(1.1);
+}
+
