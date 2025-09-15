@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Utilidades de Cadenas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cabecera -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">
+        <span class="brand-mark" aria-hidden="true">Aa</span>
+        Utilidades de Cadenas
+      </h1>
+      <nav class="nav">
+        <a href="#" class="nav-link">Inicio</a>
+        <a href="#" class="nav-link">Funciones</a>
+        <a href="#" class="nav-link">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container">
+    <section class="card">
+      <h2 class="section-title">Analiza tu texto</h2>
+      <p class="muted">
+        Ingresa un texto y ejecuta cualquiera de las funciones desde <strong>cadenas.js</strong>.
+      </p>
+
+      <label for="texto" class="sr-only">Texto a analizar</label>
+      <textarea id="texto" class="input-text" rows="5" placeholder="Escribe aquí tu texto..."></textarea>
+
+      <div class="btn-grid">
+        <button id="btnVocales" class="btn">Contar Vocales</button>
+        <button id="btnPalabras" class="btn">Contar Palabras</button>
+        <button id="btnCaracteres" class="btn">Contar Caracteres</button>
+      </div>
+
+      <div class="results-grid" aria-live="polite">
+        <article class="result">
+          <h3>Vocales</h3>
+          <p id="outVocales" class="out">—</p>
+        </article>
+        <article class="result">
+          <h3>Palabras</h3>
+          <p id="outPalabras" class="out">—</p>
+        </article>
+        <article class="result">
+          <h3>Caracteres</h3>
+          <p id="outCaracteres" class="out">—</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Utilidades de Cadenas · Hecho con <span class="heart" aria-hidden="true">◆</span></p>
+      <a href="#" class="footer-link">Términos</a>
+      <a href="#" class="footer-link">Privacidad</a>
+    </div>
+  </footer>
+
+  <!-- Importa primero tus funciones -->
+  <script src="cadenas.js"></script>
+  <!-- Luego nuestra lógica de la página -->
+  <script src="app.js"></script>
+</body>
+</html>

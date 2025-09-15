@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor y Operaciones</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <!-- CABECERA -->
+  <header>
+    <h1>🔢 Conversor y Operaciones Numéricas</h1>
+    <p>Funciones en Binario, Decimal y Hexadecimal</p>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <section>
+      <h2>Conversión de Bases</h2>
+      <input type="number" id="numero" placeholder="Ingresa un número decimal">
+      <button onclick="convertir()">Convertir</button>
+      <div id="resultadoConversion" class="resultado"></div>
+    </section>
+
+    <section>
+      <h2>Operaciones Binarias</h2>
+      <input type="text" id="bin1" placeholder="Binario 1 (ej. 1010)">
+      <input type="text" id="bin2" placeholder="Binario 2 (ej. 1101)">
+      <select id="operacion">
+        <option value="suma">Suma</option>
+        <option value="resta">Resta</option>
+        <option value="multiplicacion">Multiplicación</option>
+        <option value="division">División</option>
+      </select>
+      <button onclick="operar()">Calcular</button>
+      <div id="resultadoOperacion" class="resultado"></div>
+    </section>
+
+    <section>
+      <h2>Funciones Matemáticas</h2>
+      <button onclick="mostrarTabla()">Tabla de multiplicar (5)</button>
+      <button onclick="mostrarSumaPares()">Suma de pares (1-50)</button>
+      <button onclick="mostrarSumaPrimos()">Suma de primos (1-100)</button>
+      <div id="resultadoMatematico" class="resultado"></div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>© 2025 - Proyecto de Any | Ingeniería Industrial</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="funciones.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

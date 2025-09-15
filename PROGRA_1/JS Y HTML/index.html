@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>EJEMPLO CON ONCLICK</title>
+  <link rel="stylesheet" href="estilos.css"> <!-- Enlace al CSS -->
+</head>
+<body>
+  <div class="contenedor">
+    <h2>¿Cuál es tu nombre?</h2>
+
+    <input type="text" id="input" placeholder="Escribe tu nombre aquí" />
+    <button onclick="mostrarNombre()">Mostrar</button>
+    <button onclick="InsertarLista()">INSERTA LISTA</button>
+    <button onclick="EliminarElementosLista()">Eliminar ELEMENTOS DE LISTA</button>
+    <button onclick="mostrarNombre()">MOSTRAR ELEMENTOS DEL ARRAY</button>
+    <button onclick="MostrarHabilitadosOEP()">MOSTRAR HABILITADOS PARA VOTAR</button>
+    <input type="text" id="input_name" placeholder="Escribe tu nombre aquí" />
+    <input type="text" id="input_edad" placeholder="Escribe tu edad aquí" />
+    <input type="text" id="input_correo" placeholder="Escribe tu email aquí" />
+    <input type="text" id="input_carrera" placeholder="Escribe tu carrera aquí" />
+    <input type="text" id="input_phone" placeholder="Escribe tu telefono aquí" />
+    <button onclick="AddEstudiante()">AGREGAR ESTUDIANTES</button>    
+    <ul id="resultado"></ul>
+  
+  </div>
+<div id="tabla-container"></div>
+
+  <select id="colorSelect" onchange="mostrarColor()">
+    <option value="">-- Choose a color --</option>
+  </select>
+  <script src="scrip.js"></script>
+</body>
+</html>

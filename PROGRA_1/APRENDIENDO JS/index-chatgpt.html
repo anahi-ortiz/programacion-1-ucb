@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Profesional</title>
+    <style>
+        :root {
+            --color-primario: #E89C00;
+            --color-secundario: #11446E;
+            --color-texto: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: var(--color-secundario);
+            color: var(--color-texto);
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        button {
+            background-color: var(--color-primario);
+            color: var(--color-texto);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c17f00;
+        }
+
+        footer {
+            background-color: var(--color-secundario);
+            color: var(--color-texto);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+            main {
+                padding: 1rem;
+            }
+            button {
+                width: 100%;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Página Profesional</h1>
+    </header>
+
+    <main>
+        <h2>Bienvenido</h2>
+        <p>Haz clic en el botón para ejecutar mi primer algoritmo.</p>
+        <button onclick="mi_primer_algoritmo()">Ejecutar Algoritmo</button>
+        <div class="row">
+            <input type="number" id="numDecimal" placeholder="Ingresa un número decimal">
+            <button onclick="binarioADecimal(document.getElementById('numDecimal').value)">
+            Convertir a decimal
+</button>
+
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 - Desarrollado por [Tu Nombre] | Todos los derechos reservados
+    </footer>
+
+    <!-- Archivo con tus funciones -->
+    <script src="aprendiendo.js"></script>
+</body>
+</html>
