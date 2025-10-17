@@ -49,7 +49,7 @@ class Matrix{
             initialValue = initialValue + 2;
         }
     }
-
+//1
     fillSquare() {
         for (let i = 0; i < this.rows; i++) {
             for (let j = 0; j < this.cols; j++) {
@@ -57,7 +57,7 @@ class Matrix{
             }
         }
     }
-
+//2
     fillInnerFrame() {
         for (let i = 0; i < this.rows; i++) {
             for (let j = 0; j < this.cols; j++) {
@@ -69,7 +69,7 @@ class Matrix{
             }
         }
     }
-
+//3
     fillCross() {
         let mid = Math.floor(this.rows / 2);
         for (let i = 0; i < this.rows; i++) {
@@ -84,7 +84,7 @@ class Matrix{
     }
 
 
-
+//4
     fillBordersAndDiagonals() {
         for (let i = 0; i < this.rows; i++) {
             for (let j = 0; j < this.cols; j++) {
@@ -98,7 +98,7 @@ class Matrix{
             }
         }
     }
-
+//5
     fillFlag() {
         for (let i = 0; i < this.rows; i++) {
             let value;
@@ -111,7 +111,7 @@ class Matrix{
             }
         }
     }
-
+//6
     fillAlternateRows() {
         for (let i = 0; i < this.rows; i++) {
             let value = i % 2 === 0 ? 1 : 0;
@@ -120,7 +120,7 @@ class Matrix{
             }
         }
     }
-
+//7
     fillZigZag() {
         for (let i = 0; i < this.rows; i++) {
             for (let j = 0; j < this.cols; j++) {
@@ -128,7 +128,7 @@ class Matrix{
             }
         }
     }
-
+//8
     fillSpiral() {
       // Ejercicio 8: Relleno en Espiral (versión simplificada)
     // Reiniciar matriz a ceros
@@ -177,27 +177,144 @@ class Matrix{
         }
     }
 
-
-    fillUpperLeftTriangle() {
-        for (let i = 0; i < this.rows; i++) {
-            for (let j = 0; j <= i; j++) {
-                this.data[i][j] = 1;
+//9
+   fillUpperLeftTriangle() {
+    for (let i = 0; i < this.rows; i++) {
+        for (let j = 0; j < this.cols; j++) {
+            if (j <= i) {
+                this.data[i][j] = 1;  // Lado del triángulo
+            } else {
+                this.data[i][j] = 0;  // Resto vacío
             }
         }
     }
+}
 
+//10
     fillLowerRightTriangle() {
-        for (let i = 0; i < this.rows; i++) {
-            for (let j = this.cols - i - 1; j < this.cols; j++) {
-                this.data[i][j] = 1;
-            }
+       for (let i = 0; i < this.rows; i++) {
+        for (let j = this.cols - 1 - i; j < this.cols; j++) {
+            this.data[i][j] = 1;
         }
     }
-
+}
+//11
     fillGrid() {
         for (let i = 0; i < this.rows; i++) {
             for (let j = 0; j < this.cols; j++) {
-                if (i % 2 === 0 || j % 5 === 0 || j === this.cols - 1) {
+                if (i % 2 === 0 || j % 10 === 0 || j === this.cols - 1) {
+                    this.data[i][j] = 1;
+                } else {
+                    this.data[i][j] = 0;
+                }
+            }
+        }
+    }
+//12
+    fillCenterTriangle() {
+    for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                if (
+                    i >= 1 && i <= 5 && // zona del triángulo
+                    j >= this.cols / 2 - i &&
+                    j <= this.cols / 2 + i
+                ) {
+                    this.data[i][j] = 1;
+                } else {
+                    this.data[i][j] = 0;
+                }
+            }
+        }
+    }
+    //13
+    fillConcentricRhombus() {
+        let mid = Math.floor(this.rows / 2);
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                let dist = Math.abs(i - mid) + Math.abs(j - mid);
+                this.data[i][j] = dist <= 4 ? 1 : 0;
+            }
+        }
+    }
+
+    //14
+    fillConcentricCrosses() {
+        let mid = Math.floor(this.rows / 2);
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                if (
+                    i === 2 || j === 2 ||
+                    i === mid || j === mid ||
+                    i === this.rows - 3 || j === this.cols - 3
+                ) {
+                    this.data[i][j] = 1;
+                } else {
+                    this.data[i][j] = 0;
+                }
+            }
+        }
+    }
+    //15
+    fillDiagonalFlag() {
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                this.data[i][j] = (j <= i) ? 1 : 0;
+            }
+        }
+    }
+
+    //16
+    fillNestedSquares() {
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+
+                // --- Cuadro exterior (borde) ---
+                if (i === 0 || j === 0 || i === this.rows - 1 || j === this.cols - 1) {
+                    this.data[i][j] = 1;
+
+                // --- Cuadro interior ---
+                } else if (i >= 2 && i <= this.rows - 3 && j >= 2 && j <= this.cols - 3) {
+
+                    // Rellenar el borde del cuadrado interior con 2
+                    if (i === 2 || j === 2 || i === this.rows - 3 || j === this.cols - 3) {
+                        this.data[i][j] = 2;
+                    } else {
+                        this.data[i][j] = 0; // Interior vacío
+                    }
+
+                // --- Resto ---
+                } else {
+                    this.data[i][j] = 0;
+                }
+            }
+        }
+    }
+
+ 
+    //17
+    fillBordersAndCenter() {
+        let start = Math.floor(this.rows / 2) ;
+        let end = Math.floor(this.cols / 2) ;
+
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                if (i === 0 || j === 0 || i === this.rows - 1 || j === this.cols - 1) {
+                    this.data[i][j] = 1;
+                } else if (i >= start - 2 && i <= start + 1 && // 4 filas centradas
+                j >= end - 2 && j <= end + 1)
+                {this.data[i][j] = 2; // 3 columnas centradas
+                }else {
+                    this.data[i][j] = 0;
+                }
+            }
+        }
+    }
+
+    //18
+    fillParallelLines() {
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                if (i % 2 === 0 || j === 0 || j === this.cols - 1) {
                     this.data[i][j] = 1;
                 } else {
                     this.data[i][j] = 0;
@@ -206,6 +323,69 @@ class Matrix{
         }
     }
 
+    //19
+
+    fillCrossMarks() {
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                this.data[i][j] = ((i + j) % 4 === 0 || (i - j) % 4 === 0) ? 1 : 0;
+            }
+        }
+    }
+
+    //20
+    fillCornerRhombus() {
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+
+                // Por defecto todo vacío
+                this.data[i][j] = 0;
+
+                // --- Esquina superior izquierda ---
+                if (i + j <= 3) {
+                    this.data[i][j] = 1;
+                }
+
+                // --- Esquina superior derecha ---
+                else if ((this.cols - 1 - j) + i <= 3) {
+                    this.data[i][j] = 1;
+                }
+
+                // --- Esquina inferior izquierda ---
+                else if ((this.rows - 1 - i) + j <= 3) {
+                    this.data[i][j] = 1;
+                }
+
+                // --- Esquina inferior derecha ---
+                else if ((this.rows - 1 - i) + (this.cols - 1 - j) <= 3) {
+                    this.data[i][j] = 1;
+                }
+            }
+        }
+    }
+
+    //21
+    fillChessboard() {
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                this.data[i][j] = (i + j) % 2 === 0 ? 1 : 0;
+            }
+        }
+    }
+
+    //22
+
+    fillHourglass() {
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                if (j >= i && j < this.cols - i || j >= this.cols - i - 1 && j <= i) {
+                    this.data[i][j] = 1;
+                } else {
+                    this.data[i][j] = 0;
+                }
+            }
+        }
+    }
 
     toString() {
         return this.data.map(row => row.join('\t')).join('\n');

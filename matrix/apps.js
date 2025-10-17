@@ -33,6 +33,17 @@ function initializaCanvas(){
             case "9": matrix.fillUpperLeftTriangle(); break;
             case "10": matrix.fillLowerRightTriangle(); break;
             case "11": matrix.fillGrid(); break;
+            case "12": matrix.fillCenterTriangle(); break;
+            case "13": matrix.fillConcentricRhombus(); break;
+            case "14": matrix.fillConcentricCrosses(); break;
+            case "15": matrix.fillDiagonalFlag(); break;
+            case "16": matrix.fillNestedSquares(); break;
+            case "17": matrix.fillBordersAndCenter(); break;
+            case "18": matrix.fillParallelLines(); break;
+            case "19": matrix.fillCrossMarks(); break;
+            case "20": matrix.fillCornerRhombus(); break;
+            case "21": matrix.fillChessboard(); break;
+            case "22": matrix.fillHourglass(); break;           
             default:
                 alert("Selecciona un ejercicio válido.");
                 return;
