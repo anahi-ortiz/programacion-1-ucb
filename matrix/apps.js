@@ -5,7 +5,7 @@ const clearButton = document.getElementById('clearBtn');
 const incrementBtn = document.getElementById('incrementBtn');
 const exerciseSelect = document.getElementById('exerciseSelect');
 const executeExercise = document.getElementById('executeExercise');
-
+const sumabtn1 = document.getElementById('sumabtn');
 //Contexto de dibujo 
 const context = canvas.getContext('2d');
 
@@ -19,6 +19,8 @@ function initializaCanvas(){
     fillButton.addEventListener('click', fillMatrix);
     clearButton.addEventListener('click', clearCanvas);
     incrementBtn.addEventListener('click', fillIncrementRows);;
+    sumabtn1.addEventListener('click', sumabtn);
+    
     executeExercise.addEventListener('click', () => {
         const selected = exerciseSelect.value;
         switch (selected) {
@@ -88,6 +90,13 @@ function fillIncrementRows(){
     matrix.fillIncrementRows();
     drawMatrix();
 }
+function sumabtn(){
+    matrix.fillIncrementRows();
+    drawMatrix();
+}
+
+
+
 
 // Limpia el canvas
 function clearCanvas() {

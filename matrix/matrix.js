@@ -387,6 +387,17 @@ class Matrix{
         }
     }
 
+
+    sumabtn(){
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+            this.data[i][j] = (j % 3)+ (i * 3+ 1);
+            }
+        }
+              
+    }
+
+
     toString() {
         return this.data.map(row => row.join('\t')).join('\n');
     }
